@@ -1,0 +1,80 @@
+.service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .service-icon {
+      font-size: 3rem;
+      color: #0d6efd;
+    }
+
+#faq {
+  padding: 4rem 0;
+}
+
+#faq h2 {
+  font-weight: 700;
+  color: #6a1b9a;
+  margin-bottom: 2rem;
+}
+
+/* Accordion Item */
+.accordion-button {
+  background-color: #f3f0f8;
+  color: #4a148c;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  padding: 1rem 1.25rem;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:hover {
+  background-color: #6a1b9a;
+  color: #fff;
+}
+
+.accordion-button::after {
+  font-size: 1.2rem;
+  color: #6a1b9a;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+  color: #fff;
+}
+
+/* Accordion Body */
+.accordion-body {
+  background-color: white;
+  color: #333;
+  border-left: 3px solid #6a1b9a;
+  padding: 1rem 1.25rem;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Smooth Collapse Animation */
+.accordion-collapse {
+  transition: max-height 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #faq h2 {
+    font-size: 1.8rem;
+  }
+  .accordion-button {
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+  }
+}

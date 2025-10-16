@@ -1,0 +1,265 @@
+ body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 70px; /* avoids overlap with fixed navbar */
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* =========================
+   Hero Section
+========================= */
+#home {
+  background: linear-gradient(135deg, #0d6efd, #6c63ff);
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+#home h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+#home h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+/* Hero Section Background */
+.hero {
+  background: linear-gradient(135deg, #6a1b9a, #ab47bc);
+  color: white;
+  padding: 6rem 0;
+}
+
+
+.profile-card {
+  max-width: 350px;
+  margin: 2rem auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  padding: 1.5rem;
+  background: white;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+/* =====================
+   Keyframe Animations
+===================== */
+
+/* Main Heading Entrance + Float */
+@keyframes moveHeading {
+  0% { transform: translateY(-100%); opacity: 0; }
+  60% { transform: translateY(20px); opacity: 1; }
+  100% { transform: translateY(0); }
+}
+
+/* Floating effect: Up-down + slight left-right */
+@keyframes floatHeading {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(5px, -5px); }
+  50% { transform: translate(0, -10px); }
+  75% { transform: translate(-5px, -5px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Subheading Fade-in Up */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Profile Card Pop-in */
+@keyframes popIn {
+  0% { transform: scale(0.8) translateY(50px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* Card Text Fade-in Sequential */
+@keyframes textFade {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================
+   Applying Animations
+===================== */
+#heroHeading {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: moveHeading 1.5s ease-out forwards, floatHeading 4s ease-in-out 1.5s infinite;
+}
+
+#heroSubheading {
+  font-size: 1.5rem;
+  color: #e0d4f7;
+  margin-top: 0.5rem;
+  animation: fadeInUp 1.5s ease forwards 1.5s; /* starts after heading */
+}
+
+#profileCard {
+  animation: popIn 1.2s ease forwards 2s; /* starts after subheading */
+}
+
+.profile-card .card-title {
+  animation: textFade 1s ease forwards 2.5s;
+}
+
+.profile-card .card-text {
+  animation: textFade 1s ease forwards 2.7s;
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+/* =========================
+   About Section
+========================= */
+#about {
+  padding: 4rem 1rem;
+}
+
+#about h2 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* =========================
+   Services Section
+========================= */
+#services {
+  background: linear-gradient(135deg, #0d6efd, #6c63ff);;
+  padding: 4rem 1rem;
+}
+
+#services h2 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+#services .col-md-3 {
+  margin-bottom: 2rem;
+}
+
+#services i {
+  color: #0d6efd;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+#services i:hover {
+  transform: scale(1.2);
+}
+
+/* =========================
+   Projects Section
+========================= */
+#projects {
+  padding: 4rem 1rem;
+}
+
+#projects h2 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+#projects .card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+#projects .card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   Contact Section
+========================= */
+#contact {
+  background:linear-gradient(135deg, #0d6efd, #6c63ff);;
+  padding: 4rem 1rem;
+}
+
+#contact h2 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+#contact p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  background: #212529;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+footer .social-icons a {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #0d6efd;
+}
+
+@media (max-width: 768px) {
+  #heroHeading { font-size: 2.2rem; }
+  #heroSubheading { font-size: 1.1rem; }
+  .profile-card { max-width: 280px; }
+  .profile-card img { width: 120px; height: 120px; }
+}

@@ -1,0 +1,127 @@
+ .body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #0d6efd, #6c63ff);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 50vh;
+      padding: 5rem 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .hero.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 4rem 1rem;
+    }
+    .profile-pic {
+      width: 180px;
+      height: 1800px;
+      object-fit: contain;
+      border-radius: 50%;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .profile-pic.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+    .about-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .about-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .skills span {
+      background: #0d6efd;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: 'background 0.3s ease, transform 0.3s ease';
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .skills span.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .skills span:hover {
+      background: #6c63ff;
+      cursor: default;
+    }
+    /* Footer */
+    footer {
+      margin-top: 3rem;
+    }
+    @media (min-width: 768px) {
+      .hero {
+       min-height: 60vh;
+       padding: 4rem 2rem;
+       }
+     .hero h1 {
+      font-size: 3rem;
+      }
+     .hero p {
+      font-size: 1.25rem;
+     }
+    .profile-pic {
+      width: 250px;
+      height: 250px;
+      }
+     .about-card {
+      padding: 2rem;
+      }
+     .skills span {
+      font-size: 1rem;
+      padding: 0.5rem 1.2rem;
+  }
+}

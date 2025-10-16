@@ -1,0 +1,42 @@
+ body {
+      background-image: url('../images/beginner.webp');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      text-align: center;
+      background-color: #B7832F;
+      color: black;
+      padding: 15px 0;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .contact-card {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+      color: #B7832F;
+    }
+    @media (min-width: 768px) {
+      h3 {
+      font-size: 1.8rem;
+       }
+     label, p {
+      font-size: 1.1rem;
+     }
+     .contact-card {
+      padding: 30px 40px;
+     }
+}
